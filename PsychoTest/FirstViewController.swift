@@ -260,7 +260,7 @@ class FirstViewController: UIViewController {
                         for j in 1...num {
                             dict[String(j)] = storedData[j][i]
                         }
-                        var det = AnomalyDetection(relativeCriterion: 0.10, record: dict)
+                        let det = AnomalyDetection(relativeCriterion: 0.10, record: dict)
                         if (det.MVG()) {alertNum += 1;}
                     }
                     if (alertNum >= 3)  {NSLog("ALERT!!!!!!");}

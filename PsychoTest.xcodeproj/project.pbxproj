@@ -22,6 +22,8 @@
 		E2C627D11FA54371007EE61A /* Detection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C627D01FA54371007EE61A /* Detection.swift */; };
 		E2C627D31FA5439D007EE61A /* ElectroDermal.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C627D21FA5439D007EE61A /* ElectroDermal.swift */; };
 		E2F6DBF51FA5A1DF00234C60 /* VectorGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F6DBF41FA5A1DF00234C60 /* VectorGen.swift */; };
+		E2F6DC011FA5D87F00234C60 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E2F6DBFE1FA5D87F00234C60 /* Info.plist */; };
+		E2F6DC021FA5D87F00234C60 /* TKRadarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F6DC001FA5D87F00234C60 /* TKRadarChart.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,9 @@
 		E2C627D01FA54371007EE61A /* Detection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Detection.swift; sourceTree = "<group>"; };
 		E2C627D21FA5439D007EE61A /* ElectroDermal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectroDermal.swift; sourceTree = "<group>"; };
 		E2F6DBF41FA5A1DF00234C60 /* VectorGen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VectorGen.swift; sourceTree = "<group>"; };
+		E2F6DBFE1FA5D87F00234C60 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2F6DBFF1FA5D87F00234C60 /* TKRadarChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKRadarChart.h; sourceTree = "<group>"; };
+		E2F6DC001FA5D87F00234C60 /* TKRadarChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TKRadarChart.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +132,7 @@
 				E2C627D01FA54371007EE61A /* Detection.swift */,
 				E2C627D21FA5439D007EE61A /* ElectroDermal.swift */,
 				E2F6DBF41FA5A1DF00234C60 /* VectorGen.swift */,
+				E2F6DBFD1FA5D87F00234C60 /* TKRadarChart */,
 			);
 			path = PsychoTest;
 			sourceTree = "<group>";
@@ -166,6 +172,16 @@
 				E29CB3841FA4F04400CD7B64 /* HealthKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E2F6DBFD1FA5D87F00234C60 /* TKRadarChart */ = {
+			isa = PBXGroup;
+			children = (
+				E2F6DBFE1FA5D87F00234C60 /* Info.plist */,
+				E2F6DBFF1FA5D87F00234C60 /* TKRadarChart.h */,
+				E2F6DC001FA5D87F00234C60 /* TKRadarChart.swift */,
+			);
+			path = TKRadarChart;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,6 +302,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2F6DC011FA5D87F00234C60 /* Info.plist in Resources */,
 				E21694561FA444490047A48B /* LaunchScreen.storyboard in Resources */,
 				E21694531FA444490047A48B /* Assets.xcassets in Resources */,
 				E21694511FA444490047A48B /* Main.storyboard in Resources */,
@@ -321,6 +338,7 @@
 				E2C627D31FA5439D007EE61A /* ElectroDermal.swift in Sources */,
 				E23EB3FF1FA51620003DDC7B /* HeartRate.swift in Sources */,
 				E216944C1FA444490047A48B /* FirstViewController.swift in Sources */,
+				E2F6DC021FA5D87F00234C60 /* TKRadarChart.swift in Sources */,
 				E2F6DBF51FA5A1DF00234C60 /* VectorGen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
