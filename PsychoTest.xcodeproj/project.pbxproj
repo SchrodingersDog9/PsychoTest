@@ -22,8 +22,8 @@
 		E2C627D11FA54371007EE61A /* Detection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C627D01FA54371007EE61A /* Detection.swift */; };
 		E2C627D31FA5439D007EE61A /* ElectroDermal.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C627D21FA5439D007EE61A /* ElectroDermal.swift */; };
 		E2F6DBF51FA5A1DF00234C60 /* VectorGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F6DBF41FA5A1DF00234C60 /* VectorGen.swift */; };
-		E2F6DC011FA5D87F00234C60 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E2F6DBFE1FA5D87F00234C60 /* Info.plist */; };
-		E2F6DC021FA5D87F00234C60 /* TKRadarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F6DC001FA5D87F00234C60 /* TKRadarChart.swift */; };
+		FE0374601FA5F134006FADAB /* TKRadarChart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE03745A1FA5EB6C006FADAB /* TKRadarChart.framework */; };
+		FE0374611FA5F134006FADAB /* TKRadarChart.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FE03745A1FA5EB6C006FADAB /* TKRadarChart.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +41,42 @@
 			remoteGlobalIDString = E21694451FA444490047A48B;
 			remoteInfo = PsychoTest;
 		};
+		FE0374571FA5EB6C006FADAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE0374521FA5EB6C006FADAB /* TKRadarChart.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6A415EF01DEB1DAC001DBF69;
+			remoteInfo = TKRadarChartDemo;
+		};
+		FE0374591FA5EB6C006FADAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE0374521FA5EB6C006FADAB /* TKRadarChart.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6A3F39B51DEB1E1A0067576C;
+			remoteInfo = TKRadarChart;
+		};
+		FE0374621FA5F134006FADAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE0374521FA5EB6C006FADAB /* TKRadarChart.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6A3F39B41DEB1E1A0067576C;
+			remoteInfo = TKRadarChart;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FE0374641FA5F134006FADAB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FE0374611FA5F134006FADAB /* TKRadarChart.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		E21519C61FA4DEDD00CB29BF /* SleepAnalysis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SleepAnalysis.swift; sourceTree = "<group>"; };
@@ -66,9 +101,9 @@
 		E2C627D01FA54371007EE61A /* Detection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Detection.swift; sourceTree = "<group>"; };
 		E2C627D21FA5439D007EE61A /* ElectroDermal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectroDermal.swift; sourceTree = "<group>"; };
 		E2F6DBF41FA5A1DF00234C60 /* VectorGen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VectorGen.swift; sourceTree = "<group>"; };
-		E2F6DBFE1FA5D87F00234C60 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E2F6DBFF1FA5D87F00234C60 /* TKRadarChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKRadarChart.h; sourceTree = "<group>"; };
-		E2F6DC001FA5D87F00234C60 /* TKRadarChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TKRadarChart.swift; sourceTree = "<group>"; };
+		FE0374521FA5EB6C006FADAB /* TKRadarChart.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TKRadarChart.xcodeproj; path = "../TBXark-TKRadarChart-ca48724 2/TKRadarChart.xcodeproj"; sourceTree = "<group>"; };
+		FE0374651FA5F79C006FADAB /* The-Elephant-Rope-Inspirational-Short-Stories.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "The-Elephant-Rope-Inspirational-Short-Stories.jpg"; path = "../../../Desktop/The-Elephant-Rope-Inspirational-Short-Stories.jpg"; sourceTree = "<group>"; };
+		FE0374661FA5F87F006FADAB /* Thinking-Out-of-the-Box-Inspirational-Short-Stories.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Thinking-Out-of-the-Box-Inspirational-Short-Stories.jpg"; path = "../../Thinking-Out-of-the-Box-Inspirational-Short-Stories.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +112,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E29CB3851FA4F04400CD7B64 /* HealthKit.framework in Frameworks */,
+				FE0374601FA5F134006FADAB /* TKRadarChart.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +136,7 @@
 		E216943D1FA444490047A48B = {
 			isa = PBXGroup;
 			children = (
+				FE0374521FA5EB6C006FADAB /* TKRadarChart.xcodeproj */,
 				E21694481FA444490047A48B /* PsychoTest */,
 				E216945F1FA444490047A48B /* PsychoTestTests */,
 				E216946A1FA444490047A48B /* PsychoTestUITests */,
@@ -132,7 +169,6 @@
 				E2C627D01FA54371007EE61A /* Detection.swift */,
 				E2C627D21FA5439D007EE61A /* ElectroDermal.swift */,
 				E2F6DBF41FA5A1DF00234C60 /* VectorGen.swift */,
-				E2F6DBFD1FA5D87F00234C60 /* TKRadarChart */,
 			);
 			path = PsychoTest;
 			sourceTree = "<group>";
@@ -158,6 +194,8 @@
 		E21694791FA444740047A48B /* support */ = {
 			isa = PBXGroup;
 			children = (
+				FE0374661FA5F87F006FADAB /* Thinking-Out-of-the-Box-Inspirational-Short-Stories.jpg */,
+				FE0374651FA5F79C006FADAB /* The-Elephant-Rope-Inspirational-Short-Stories.jpg */,
 				E21694491FA444490047A48B /* AppDelegate.swift */,
 				E21694521FA444490047A48B /* Assets.xcassets */,
 				E21694541FA444490047A48B /* LaunchScreen.storyboard */,
@@ -174,14 +212,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E2F6DBFD1FA5D87F00234C60 /* TKRadarChart */ = {
+		FE0374531FA5EB6C006FADAB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E2F6DBFE1FA5D87F00234C60 /* Info.plist */,
-				E2F6DBFF1FA5D87F00234C60 /* TKRadarChart.h */,
-				E2F6DC001FA5D87F00234C60 /* TKRadarChart.swift */,
+				FE0374581FA5EB6C006FADAB /* TKRadarChartDemo.app */,
+				FE03745A1FA5EB6C006FADAB /* TKRadarChart.framework */,
 			);
-			path = TKRadarChart;
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,10 +231,12 @@
 				E21694421FA444490047A48B /* Sources */,
 				E21694431FA444490047A48B /* Frameworks */,
 				E21694441FA444490047A48B /* Resources */,
+				FE0374641FA5F134006FADAB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				FE0374631FA5F134006FADAB /* PBXTargetDependency */,
 			);
 			name = PsychoTest;
 			productName = PsychoTest;
@@ -252,7 +291,7 @@
 				TargetAttributes = {
 					E21694451FA444490047A48B = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 6XK954Y4CJ;
+						DevelopmentTeam = 4H9L8R54GW;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.HealthKit = {
@@ -288,6 +327,12 @@
 			mainGroup = E216943D1FA444490047A48B;
 			productRefGroup = E21694471FA444490047A48B /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = FE0374531FA5EB6C006FADAB /* Products */;
+					ProjectRef = FE0374521FA5EB6C006FADAB /* TKRadarChart.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				E21694451FA444490047A48B /* PsychoTest */,
@@ -297,12 +342,28 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		FE0374581FA5EB6C006FADAB /* TKRadarChartDemo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = TKRadarChartDemo.app;
+			remoteRef = FE0374571FA5EB6C006FADAB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FE03745A1FA5EB6C006FADAB /* TKRadarChart.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = TKRadarChart.framework;
+			remoteRef = FE0374591FA5EB6C006FADAB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		E21694441FA444490047A48B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2F6DC011FA5D87F00234C60 /* Info.plist in Resources */,
 				E21694561FA444490047A48B /* LaunchScreen.storyboard in Resources */,
 				E21694531FA444490047A48B /* Assets.xcassets in Resources */,
 				E21694511FA444490047A48B /* Main.storyboard in Resources */,
@@ -338,7 +399,6 @@
 				E2C627D31FA5439D007EE61A /* ElectroDermal.swift in Sources */,
 				E23EB3FF1FA51620003DDC7B /* HeartRate.swift in Sources */,
 				E216944C1FA444490047A48B /* FirstViewController.swift in Sources */,
-				E2F6DC021FA5D87F00234C60 /* TKRadarChart.swift in Sources */,
 				E2F6DBF51FA5A1DF00234C60 /* VectorGen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -371,6 +431,11 @@
 			isa = PBXTargetDependency;
 			target = E21694451FA444490047A48B /* PsychoTest */;
 			targetProxy = E21694681FA444490047A48B /* PBXContainerItemProxy */;
+		};
+		FE0374631FA5F134006FADAB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TKRadarChart;
+			targetProxy = FE0374621FA5F134006FADAB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -494,9 +559,10 @@
 		E21694711FA444490047A48B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = PsychoTest/PsychoTest.entitlements;
-				DEVELOPMENT_TEAM = 6XK954Y4CJ;
+				DEVELOPMENT_TEAM = 4H9L8R54GW;
 				INFOPLIST_FILE = PsychoTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = wc.PsychoTest;
@@ -508,9 +574,10 @@
 		E21694721FA444490047A48B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = PsychoTest/PsychoTest.entitlements;
-				DEVELOPMENT_TEAM = 6XK954Y4CJ;
+				DEVELOPMENT_TEAM = 4H9L8R54GW;
 				INFOPLIST_FILE = PsychoTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = wc.PsychoTest;

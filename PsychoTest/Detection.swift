@@ -14,55 +14,59 @@ class AnomalyDetection{
         self.epsilon = epsilon
         self.stds = Dictionary()
         self.means = Dictionary()
-        self.probs = Dictionary()
+        self.zScores = Dictionary()
         self.record = vector
         self.qualify = Dictionary()
     }
     
     private let epsilon : Double!
     private let record : [String : Double]
-    private var qualify : [String: Bool]
+    public var qualify : [String: Bool]
     public var means : [String : Double]
     public var stds : [String : Double]
-    public var probs : [String : Double]
+    public var zScores : [String : Double]
     
     
-    func parameterEstimation(feature name : String, data vec : [Double]) -> Void{
-        var mean = 0.0
-        let length:Double = Double(vec.count)
-        for element in vec{
-            mean = element + mean
+    func parameterEstimation() -> Void{
+        for elements in record{
+            var mean = 0.0
+            let length:Double = Double(record.count)
+            for element in record{
+                mean = element.value + mean
+            }
+            means[elements.key] = mean/length
+            
+            var std = 0.0
+            for element in record{
+                std = (element.value-mean) * (element.value-mean) + std
+                //NSLog("std : \(std)")
+            }
+            std = sqrt(std/(length-1))
+            
+            stds[elements.key] = std
         }
-        mean = mean/length
-        
-        var std = 0.0
-        for element in vec{
-            std = (element-mean) * (element-mean) + std
-            //NSLog("std : \(std)")
-        }
-        std = sqrt(std/(length-1))
-        
-        means[name] = mean
-        stds[name] = std
     }
     
-    func zScore(feature name : String, toBeExamined value : Double) -> Double {
-        return ((value-means[name]!)/(stds[name]!))
-    }
-    
-    func Gaussian() -> Void{
+    func zScore() -> Void {
         for element in record{
-            probs[element.key] = ((1/(sqrt(2*Double.pi)))*exp((-pow(zScore(feature: element.key, toBeExamined: element.value),2)/2)))
-            qualify[element.key] = (probs[element.key]!>epsilon)
+            zScores[element.key] = ((element.value-means[element.key]!)/(stds[element.key]!))
+            qualify[element.key] = (zScores[element.key]!>epsilon)
         }
     }
+    
+    /*func Gaussian() -> Void{
+     for element in record{
+     probs[element.key] = ((1/(sqrt(2*Double.pi)))*exp((-pow(zScore(feature: element.key, toBeExamined: element.value),2)/2)))
+     qualify[element.key] = (probs[element.key]!>epsilon)
+     }
+     }*/
     
     func MVG() -> Bool {
         var joint : Double = 1.0
-        for element in probs{
+        for element in zScores{
             joint = joint * element.value
         }
-        if joint < epsilon{
+        if joint > epsilon{
             //NSLog("Alert! (\(joint) < \(epsilon!))")
             return true
         }
