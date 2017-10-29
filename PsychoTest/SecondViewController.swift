@@ -19,7 +19,15 @@ class SecondViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    @IBAction func Evaluate(_ sender: UIButton) {
+        let detect : AnomalyDetection = AnomalyDetection(relativeCriterion: 0.01)
+        detect.parameterEstimation(feature: "Dardick", data:[12,43,53,1,61,41,32,35])
+        detect.Gaussian(feature: "Dardick", toBeExamined: 400)
+        detect.MVG()
+        
+    }
+    
 
 }
 
