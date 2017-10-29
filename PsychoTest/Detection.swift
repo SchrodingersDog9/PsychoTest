@@ -57,14 +57,16 @@ class AnomalyDetection{
         }
     }
     
-    func MVG() -> Void{
+    func MVG() -> Bool {
         var joint : Double = 1.0
         for element in probs{
             joint = joint * element.value
         }
         if joint < epsilon{
-            NSLog("Alert! (\(joint) < \(epsilon!))")
+            //NSLog("Alert! (\(joint) < \(epsilon!))")
+            return true
         }
+        return false
     }
     
     

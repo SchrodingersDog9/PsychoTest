@@ -20,13 +20,13 @@ class SecondViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func Evaluate(_ sender: UIButton) {
-        //let detect : AnomalyDetection = AnomalyDetection(relativeCriterion: 0.01)
+/*    func Evaluate(_ sender: UIButton) {
+        //let detect : AnomalyDetection = AnomalyDetectionafdadfasdfrelativeCriterion: 0.01, nil)
         //detect.parameterEstimation(feature: "Dardick", data:[12,43,53,1,61,41,32,35])
         //detect.Gaussian(feature: "Dardick", toBeExamined: 400)
         //detect.MVG()
         
-    }
+    }*/
     
 
 }
