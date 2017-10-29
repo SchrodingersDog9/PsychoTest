@@ -21,6 +21,7 @@
 		E29CB3851FA4F04400CD7B64 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E29CB3841FA4F04400CD7B64 /* HealthKit.framework */; };
 		E2C627D11FA54371007EE61A /* Detection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C627D01FA54371007EE61A /* Detection.swift */; };
 		E2C627D31FA5439D007EE61A /* ElectroDermal.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C627D21FA5439D007EE61A /* ElectroDermal.swift */; };
+		E2F6DBF51FA5A1DF00234C60 /* VectorGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F6DBF41FA5A1DF00234C60 /* VectorGen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		E29CB3841FA4F04400CD7B64 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		E2C627D01FA54371007EE61A /* Detection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Detection.swift; sourceTree = "<group>"; };
 		E2C627D21FA5439D007EE61A /* ElectroDermal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectroDermal.swift; sourceTree = "<group>"; };
+		E2F6DBF41FA5A1DF00234C60 /* VectorGen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VectorGen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 				E23EB3FE1FA51620003DDC7B /* HeartRate.swift */,
 				E2C627D01FA54371007EE61A /* Detection.swift */,
 				E2C627D21FA5439D007EE61A /* ElectroDermal.swift */,
+				E2F6DBF41FA5A1DF00234C60 /* VectorGen.swift */,
 			);
 			path = PsychoTest;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				E2C627D31FA5439D007EE61A /* ElectroDermal.swift in Sources */,
 				E23EB3FF1FA51620003DDC7B /* HeartRate.swift in Sources */,
 				E216944C1FA444490047A48B /* FirstViewController.swift in Sources */,
+				E2F6DBF51FA5A1DF00234C60 /* VectorGen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

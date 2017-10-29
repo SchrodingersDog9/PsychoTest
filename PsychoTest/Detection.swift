@@ -10,16 +10,22 @@ import Foundation
 import Accelerate
 
 class AnomalyDetection{
-    init(relativeCriterion epsilon : Double){
+    init(relativeCriterion epsilon : Double, record vector : [String : Double]){
         self.epsilon = epsilon
         self.stds = Dictionary()
         self.means = Dictionary()
         self.probs = Dictionary()
+        self.record = vector
+        self.qualify = Dictionary()
     }
+    
     private let epsilon : Double!
+    private let record : [String : Double]
+    private var qualify : [String: Bool]
     public var means : [String : Double]
     public var stds : [String : Double]
     public var probs : [String : Double]
+    
     
     func parameterEstimation(feature name : String, data vec : [Double]) -> Void{
         var mean = 0.0
@@ -44,8 +50,11 @@ class AnomalyDetection{
         return ((value-means[name]!)/(stds[name]!))
     }
     
-    func Gaussian(feature name : String, toBeExamined value : Double) -> Void{
-        probs[name] = ((1/(sqrt(2*Double.pi)))*exp((-pow(zScore(feature: name, toBeExamined: value),2)/2)))
+    func Gaussian() -> Void{
+        for element in record{
+            probs[element.key] = ((1/(sqrt(2*Double.pi)))*exp((-pow(zScore(feature: element.key, toBeExamined: element.value),2)/2)))
+            qualify[element.key] = (probs[element.key]!>epsilon)
+        }
     }
     
     func MVG() -> Void{
@@ -57,8 +66,6 @@ class AnomalyDetection{
             NSLog("Alert! (\(joint) < \(epsilon!))")
         }
     }
-    
-    
     
     
     

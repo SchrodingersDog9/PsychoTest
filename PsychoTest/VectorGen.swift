@@ -1,8 +1,8 @@
 //
-//  FirstViewController.swift
+//  VectorGen.swift
 //  PsychoTest
 //
-//  Created by 王翀 on 2017/10/27.
+//  Created by 王翀 on 2017/10/29.
 //  Copyright © 2017年 王翀. All rights reserved.
 //
 
@@ -11,58 +11,38 @@ import HealthKit
 import CoreMotion
 import Foundation
 
-class FirstViewController: UIViewController {
-    let steps : DailyStep = DailyStep()
-    let heart : HeartRate = HeartRate()
-    let sleep : SleepAnalysis = SleepAnalysis()
+/*class FirstViewController: UIViewController {
     let pedo = CMPedometer()
     let healthStore = HKHealthStore()
     
-    /*override func viewDidLoad() {
-     super.viewDidLoad()
-     // Do any additional setup after loading the view, typically from a nib.
-     }*/
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
         
         let typestoRead = Set(
             [HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.stepCount)!,
              HKObjectType.categoryType(forIdentifier: HKCategoryTypeIdentifier.sleepAnalysis)!,
-             HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.heartRate)!
+             HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.heartRate)!,
+             HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.electrodermalActivity)!
             ]
         )
         
-        if #available(iOS 11.0, *) {
-            let typestoShare = Set(
-                [HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.stepCount)!,
-                 HKObjectType.categoryType(forIdentifier: HKCategoryTypeIdentifier.sleepAnalysis)!,
-                 HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.heartRate)!,
-                 HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.restingHeartRate)!
-                ]
-            )
-            
-            healthStore.requestAuthorization(toShare: typestoShare, read: typestoRead) { (success, error) -> Void in
-                if success == false {
-                    NSLog(" Display not allowed")
-                }
+        let typestoShare = Set(
+            [HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.stepCount)!,
+             HKObjectType.categoryType(forIdentifier: HKCategoryTypeIdentifier.sleepAnalysis)!,
+             HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.heartRate)!,
+             HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.electrodermalActivity)!
+            ]
+        )
+        
+        healthStore.requestAuthorization(toShare: typestoShare, read: typestoRead) { (success, error) -> Void in
+            if success == false {
+                NSLog(" Display not allowed")
             }
-        } else {
-            // Fallback on earlier versions
-            let typestoShare = Set(
-                [HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.stepCount)!,
-                 HKObjectType.categoryType(forIdentifier: HKCategoryTypeIdentifier.sleepAnalysis)!,
-                 HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.heartRate)!
-                ]
-            )
-            
-            healthStore.requestAuthorization(toShare: typestoShare, read: typestoRead) { (success, error) -> Void in
-                if success == false {
-                    NSLog(" Display not allowed")
-                }
-            }
-
         }
+        //}
+        
+        //func getVector() -> Void{
         
         let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
         if (!launchedBefore) {  //!
@@ -175,7 +155,6 @@ class FirstViewController: UIViewController {
          
          
          firstTime = false;    // LOG*/
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -184,15 +163,4 @@ class FirstViewController: UIViewController {
     }
     
     
-    @IBAction func printData(_ sender: UIButton) {
-        
-        steps.getTodaysSteps()
-        sleep.getTodaysSleep()
-        heart.getTodaysSteps()
-        
-    }
-    
-    
-    
-}
-
+}*/
